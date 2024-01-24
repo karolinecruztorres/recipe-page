@@ -4,26 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./assets/images/favicon-32x32.png"
     />
-
     <title>Frontend Mentor | Recipe page</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <link rel="stylesheet" href="css/styles.css" />
   </head>
+
   <body>
     <header>
-      <img
-        id="recipe-image"
-        src="assets/images/omelette.jpeg"
-        alt="A folded omelette stuffed with vegetables and green leaves, sprinkled with herbs, on a white plate, on a white table."
-      />
+      <picture>
+        <source
+          media="(min-width: 800px)"
+          srcset="
+            assets/images/omelette-medium.jpg  848w,
+            assets/images/omelette.jpeg       1312w
+          "
+          sizes="
+            (max-width: 1600px) 80vw,
+            25vw
+          "
+        />
+        <source
+          media="(min-width: 375px)"
+          srcset="
+            assets/images/omelette-small.jpg     375w,
+            assets/images/omelette-small@2x.jpg  848w,
+            assets/images/omelette-small@3x.jpg 1257w
+          "
+          sizes="(max-width: 500px) 100vw"
+        />
+
+        <img
+          id="recipe-image"
+          src="assets/images/omelette.jpeg"
+          alt="A folded omelette stuffed with vegetables and green leaves, sprinkled with herbs, on a white plate, on a white table."
+        />
+      </picture>
+
       <h1 class="recipe-title">Simple Omelette Recipe</h1>
     </header>
 
@@ -36,7 +57,7 @@
 
       <section class="preparation-time">
         <h2 class="section-header">Preparation time</h2>
-        <ul>
+        <ul id="total-time">
           <li>
             <mark class="highlight-text">Total:</mark> Approximately 10 minutes
           </li>
@@ -47,7 +68,7 @@
 
       <article>
         <h3 class="article-header">Ingredients</h3>
-        <ul>
+        <ul id="ingredients">
           <li>2-3 large eggs</li>
           <li>Salt, to taste</li>
           <li>Pepper, to taste</li>
@@ -104,30 +125,33 @@
           <tbody>
             <tr>
               <td>Calories</td>
-              <td class="nutrition-value">277kcal</td>
+              <td class="nutritional-value">277kcal</td>
             </tr>
             <tr>
               <td>Carbs</td>
-              <td class="nutrition-value">0g</td>
+              <td class="nutritional-value">0g</td>
             </tr>
             <tr>
               <td>Protein</td>
-              <td class="nutrition-value">20g</td>
+              <td class="nutritional-value">20g</td>
             </tr>
             <tr>
               <td>Fat</td>
-              <td class="nutrition-value">22g</td>
+              <td class="nutritional-value">22g</td>
             </tr>
           </tbody>
         </table>
       </article>
     </main>
 
-    <footer class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Karoline Cruz Torres</a>.
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+          Frontend Mentor.</a
+        >
+        Coded by <a href="#">Karoline Cruz Torres.</a>
+      </p>
     </footer>
   </body>
 </html>
