@@ -42,7 +42,7 @@ html {
 }
 
 body {
-  margin: 0 3.2rem;
+  margin: 0;
   padding: 0;
   color: hsl(30, 10%, 34%);
   font-family: "Outfit", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
@@ -53,15 +53,9 @@ body {
   background-color: hsl(0, 0%, 100%);
 }
 
-/* .wrapper {
-  max-width: 650px;
-  margin-inline: auto;
-} */
-
 header {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 #recipe-image {
@@ -70,7 +64,8 @@ header {
 }
 
 .recipe-title {
-  margin: 3.5rem 0 0.7rem;
+  margin: 4rem 0 0.7rem;
+  align-self: self-start;
   color: hsl(24, 5%, 18%);
   font-size: 3.5rem;
   line-height: 1;
@@ -79,6 +74,12 @@ header {
 .recipe-title,
 .article-header {
   font-family: "Young Serif", Georgia, "Times New Roman", Times, serif;
+}
+
+.recipe-title,
+main,
+footer {
+  margin-inline: 3.2rem;
 }
 
 section,
@@ -93,8 +94,8 @@ article {
 }
 
 .preparation-time {
-  margin-top: 3rem;
-  padding: 0.3rem 2.5rem;
+  margin-top: 3.2rem;
+  padding: 0.5rem 3rem;
   background-color: hsl(330, 100%, 98%);
   border-radius: 10px;
 }
@@ -108,7 +109,7 @@ article {
 ul,
 ol {
   margin-top: 0;
-  padding-left: 2.3rem;
+  padding-left: 2.2rem;
   list-style-type: none;
 }
 
@@ -180,7 +181,7 @@ caption {
 table,
 tr,
 td {
-  padding-block: 1.2rem;
+  padding: 1.2rem 0;
   width: 100%;
   text-align: left;
   border-collapse: collapse;
@@ -192,7 +193,7 @@ tr:not(:first-child) {
 
 td:first-child {
   width: 40%;
-  text-indent: 3.2rem;
+  text-indent: 3rem;
 }
 
 td:nth-child(2) {
@@ -214,7 +215,13 @@ td:nth-child(2) {
 
 @media screen and (min-width: 760px) {
   body {
-    margin: 3.2rem;
+    margin-block: 3.2rem;
+  }
+
+  .recipe-title,
+  main,
+  footer {
+    margin-inline: 0;
   }
 
   #recipe-image {
@@ -223,7 +230,6 @@ td:nth-child(2) {
 
   .recipe-title {
     font-size: 4rem;
-    align-self: self-start;
   }
 
   #ingredients li::before,
@@ -233,11 +239,11 @@ td:nth-child(2) {
   }
 
   td:first-child {
-    text-indent: 3.2rem;
+    text-indent: 3.3rem;
   }
 
   td:nth-child(2) {
-    text-indent: 8rem;
+    text-indent: 7.5rem;
     font-weight: 700;
   }
 
@@ -247,7 +253,7 @@ td:nth-child(2) {
   }
 
   .wrapper {
-    max-width: 650px;
+    max-width: 655px;
     margin-inline: auto;
   }
 }
